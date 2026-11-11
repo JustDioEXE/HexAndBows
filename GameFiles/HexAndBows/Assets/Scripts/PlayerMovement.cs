@@ -40,11 +40,10 @@ public class PlayerMovement : MonoBehaviour
         Vector2 inputDir = moveAction.ReadValue<Vector2>();
         float x = inputDir.x;
         float y = inputDir.y;
-
-        CalcHandsRotation();
-
         // Normalize the movement direction to ensure consistent speed in all directions
         moveDir = new Vector2(x, y).normalized;
+
+        CalcHandsRotation();
     }
 
     void FixedUpdate()
